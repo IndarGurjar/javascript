@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <script>
+    // class railwayForm {
+    //   submit() {
+    //     console.log(` form of ${this.name} is submitted`);
+    //   }
+    //   cancel() {
+    //     console.log("cancelled");
+    //   }
+    //   fill(givenname) {
+    //     this.name = givenname;
+    //   }
+    // }
+
+    // let Pan = new railwayForm()
+    // Pan.fill("PANKAJ")ds
+    // Pan.submit()
+
+    ////// class hello {
+    //   constructor(name, age) {
+    //     this.name = name;
+    //     this.age = age;
+    //   }
+    //   display() {
+    //     console.log(`the name of the user is ${this.name} and age of  ${this.name}  is  ${this.age} `)
+    //   }
+    //   addNew() {
+    //     console.log(` `)
+    //   }
+    // }
+    // let helloo = new hello("Pankaj", 25)
+    // helloo.display()
+    // helloo.addNew()
+    class car {
+      constructor(color, year) {
+        this.color = color;
+        this.year = year;
+      }
+      display() {
+        console.log(`the color of the car is ${this.color} and the year of the car is ${this.year}`)
+      }
+    }
+    class model extends car {
+      constructor(color, year, model) {
+        super(color, year);
+        this.model = model;
+      }
+      show() {
+        console.log(`the car model is ${this.model}`);
+      }
+    }
+    class type extends model {
+      constructor(type) {
+        super(model, type);
+        this.type = type;
+      }
+      showType() {
+        console.log(`the type of the car is ${this.type}`)
+      }
+    }
+
+    let myCar = new type("red", 2022, "swift","Automatic")
+    myCar.showType()
+  </script>
+</body>
+
+</html>

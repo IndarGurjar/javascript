@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+        class bank {
+            roi() {
+                return 0;
+            }
+        }
+        class savings extends bank {
+            roi() {
+                return 7.5
+            }
+        }
+        class CD extends bank {
+            roi() {
+                return 10.5
+            }
+        }
+        let b = new savings()
+        console.log( b.roi());
+       
+        let c = new CD()
+        console.log( c.roi());
+       
+    </script>
+</body>
+
+</html>

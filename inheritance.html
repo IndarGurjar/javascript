@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+        class school {
+            constructor(principal) {
+                this.principal = principal;
+                console.log(`the name of the principal is ${principal}`);
+            }
+            exam(subject) {
+                this.subject = subject;
+                console.log(`the name of the subject is "${subject}"`);
+            }
+        }
+        class Class extends school{
+            constructor(principal,teacher){
+                super(principal3)
+                this.teacher=teacher;
+                console.log(`rhe name of the teacher is ${teacher}`);
+            }
+        }
+        let a = new school('I.K.TIWARI')
+        a.exam('maths')
+        let b = new Class('I.K.TIWARI','manoj')
+    </script>
+</body>
+
+</html>

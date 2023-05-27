@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+</head>
+
+<body> 
+    <form >
+    <div>
+        <div>
+            <h1>Add two number </h1>
+        </div>
+        Enter First Number : <br>
+        <input type="text" id="Text1" name="TextBox1">
+        <br>
+        Enter Second Number : <br>
+        <input type="text" id="Text2" name="TextBox2"> <br>  <hr>
+        <input type="button"  value="Display Result" onclick="add_number()">
+       <br>
+        <br>
+        <input type="text" id="txtResult" name="TextBox3">
+        <br>
+    </div>
+</form>
+    <script type="text/javascript">
+        function add_number() {
+
+            var first_number = parseInt(document.getElementById("Text1").value);
+            var second_number = parseInt(document.getElementById("Text2").value);
+            var result = first_number + second_number;
+
+            document.getElementById("txtResult").value = result;
+        }
+
+    </script>
+    
+</body>
+
+</html>

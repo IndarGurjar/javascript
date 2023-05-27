@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        // let person = {
+        //     name: "indar",
+        //     age: 27,
+        //     weight: 65
+        // }
+        // for (const key in person) {
+        //     console.log(key,person[key]);
+        //   }
+
+
+        let employee ={
+            name:"indar",
+            age:27,
+            weight:65,
+            basicsall:50100,
+             };
+      function calbonus(params) {
+        let bonus= (this.basicsall*10)/100;
+        return bonus;
+      }
+      let bonus = calbonus.call(employee);
+      console.log(bonus);
+
+                //  console.log(employee.bonus());
+       
+
+    </script>
+</body>
+
+</html>

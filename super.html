@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        class animal {
+            constructor(color) {
+                this.color = color;
+            }
+            print() {
+                console.log(this.color);
+            }
+        }
+        class dog extends animal {
+            constructor(color, food) {
+               super(color);
+                this.food = food;
+            }
+            eat() {
+                console.log(this.food);
+            }
+            display() {
+                this.print()
+                this.eat()
+            }
+        }
+        d = new dog('brown','banana')
+        d.display()
+
+    </script>
+</body>
+
+</html>

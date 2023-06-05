@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>User Data Table</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Zipcode</th>
+
+        </tr>
+      </thead>
+      <tbody id="TableBody" class="table-bordered">
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(res => res.json())
+      .then((data) => {
+
+        const tbody = document.getElementById("TableBody")
+        data.forEach(element => {
+          const trow = document.createElement("tr");
+          tbody.appendChild(trow);
+
+
+
+          const id = document.createElement("td")
+          id.innerHTML = element.id;
+          tbody.appendChild(id)
+
+          const name = document.createElement("td")
+          name.innerHTML = element.name;
+          tbody.appendChild(name)
+
+          const email = document.createElement("td")
+          email.innerHTML = element.email;
+          tbody.appendChild(email)
+
+          const ZipCode = document.createElement("td")
+          ZipCode.innerHTML = element.address.zipcode;
+          tbody.appendChild(ZipCode)
+
+
+        });
+      }
+      )
+      .catch(error => { console.error(error); });
+  </script>
+</body>
+
+</html>

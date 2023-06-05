@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+
+<body>
+  <script>
+    class student {
+      constructor(name, age, number) {
+        this.name = name;
+        this.age = age;
+        this.number = number;
+      }
+      info() {
+         console.log(` Age : ${this.age}  Number : ${this.number}`);
+      }
+      info1() {
+         console.log(`Name : ${this.name} Age : ${this.age}  Number : ${this.number}`);
+      }
+
+    }
+    let ab = new student('indar',2,25)
+    let abc= new student('i',2,25)
+    abc.info1();
+    ab.info();
+
+  </script>
+</body>
+
+</html>

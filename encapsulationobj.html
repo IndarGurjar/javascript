@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    >
+</head>
+
+<body>
+
+    <script>
+
+        var person = {
+            name: "John",
+            age: 30,
+            getName: function () {
+                return this.name;
+            },
+            setName: function (newName) {
+                this.name = newName;
+            }
+        };
+
+        // Accessing properties using dot notation
+        console.log(person.name); // Output: John
+
+        // Accessing properties using a getter method
+        console.log(person.getName()); // Output: John
+
+        // Modifying properties using a setter method
+        person.setName("Jane");
+        console.log(person.getName());
+
+    </script>
+
+</body>
+
+</html>

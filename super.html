@@ -10,27 +10,31 @@
         class animal {
             constructor(color) {
                 this.color = color;
-            }
-            print() {
-                console.log(this.color);
-            }
-        }
-        class dog extends animal {
-            constructor(color, food) {
-               super(color);
-                this.food = food;
+                console.log(color);
             }
             eat() {
-                console.log(this.food);
-            }
-            display() {
-                this.print()
-                this.eat()
+                console.log("eat");
+
             }
         }
-        d = new dog('brown','banana')
-        d.display()
-
+        class rat extends animal{
+            constructor(color, age) {
+                super(color);
+                this.age = age;
+                console.log(age);
+            }
+        }
+        class banana extends rat{
+            constructor(color, age , name)
+            {
+                super(color, age);
+                this.name = name;
+                console.log(name);
+                }
+            
+        }
+        let ani= new banana('red',25,'indar')
+        
     </script>
 </body>
 

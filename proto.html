@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<body>
+    <script>
+        class employee {
+            constructor(id, name) {
+                this.id = id;
+                this.name = name;
+            }
+        }
+        employee.prototype.sal = 50000;
+        employee.prototype.getSala = function () {
+            console.log(this.sal); 
+            }
+
+        
+        obj = new employee(101, 'indar')
+    obj.getSala()
+    </script>
+
+</body>
+
+</html>

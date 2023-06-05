@@ -7,9 +7,7 @@
 <body>
     <script>
         class operations {
-            constructor() {
-              console.log(`this is the parent class `);
-            }
+
             addition(a, b) {
                 this.a = a;
                 this.b = b;
@@ -25,20 +23,17 @@
                 this.b = b;
                 console.log(`the Multiplication  of two number is  "${a * b}"`);
             }
-            Division(a, b) {
-                this.a = a;
-                this.b = b;
-                console.log(`the Division of two number is  "${a / b}"`);
-            }
+
 
         }
         class newOperations extends operations {
-            constructor(a, b) {
-                super(a, b);
-                console.log(`this is the child class `);
-            }
+
             Modulus(a, b) {
                 console.log(`the Modulus of two number is  "${a % b}"`);
+            }
+            Division(a, b) {
+
+                console.log(`the Division of two number is  "${a / b}"`);
             }
         }
 
@@ -46,11 +41,12 @@
         main.addition(5, 6)
         main.Subtraction(5, 6)
         main.Multiplication(5, 6)
-        main.Division(5, 6)
+
 
         let child = new newOperations
         child.addition(20, 30);
         child.Modulus(50, 20);
+        child.Division(5, 6)
 
     // </script>
 </body>

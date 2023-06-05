@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <h1 class="text-center bg-danger">Form Validation using REGEX </h1>
+    <div class="container">
+        <form class="text-center"   onsubmit="return validation()">
+            <div class="form-group">
+                <label>User Name :</label>
+                <input type="text" name="" id="username">
+                <span id="usererror" class="text-danger font-weight-bold"></span>
+
+            </div>
+            <div class="form-group">
+                <label>password :</label>
+                <input type="text" name="" id="password">
+                <span id="passworderror" class="text-danger font-weight-bold"></span>
+
+            </div>
+            <div class="form-group">
+                <label>confirm password :</label>
+                <input type="text" name="" id="confirm-password">
+                <span id="cpassworderror" class="text-danger font-weight-bold"></span>
+
+            </div>
+            <input type="submit" class="btn btn-success">
+
+        </form>
+    </div>
+    <script>
+        function validation(params) {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password');
+            var confirmpassword = document.getElementById('confirm-password');
+            var userCheck = /^[A-Za-z. ]{3,16}$/;
+            var passwordcheck = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/
+
+        }
+        if(userCheck.test(username)) {
+            document.getElementById("usererror").innerHTML = " ";
+        }
+        else {
+            document.getElementById("usererror").innerHTML = " User Name should be 3 to 16 characters ";
+            return false;
+        }
+
+
+    </script>
+</body>
+
+</html>
